@@ -10,24 +10,8 @@ Finally, you will **consume your API** using AJAX and **render the results** to 
 
 Please fork & clone this repo to get started.
 
-## Part 0. Deploy to Heroku
-Before we start coding, our first goal together is to configure our application so that it can be deployed to Heroku (a web application host).
-
-Follow the instructions here: [Deploying Express Apps to Heroku](https://github.com/SF-WDI-LABS/shared_modules/blob/master/how-to/heroku-mean-stack-deploy.md)
-
-As you continue to work on this project, you'll need to remember to push your changes to heroku (just like you would with github!):
-
-```bash
-# git add . -A
-# git commit -m "detailed description of what I changed"
-git push heroku master
-heroku open
-```
-
-It's common for code to break "in production" (broken links, different environment, missing dependenies...), so do your best to debug!
-
 ## Part 1. Personal API
-Now that we're deployed, it's time to start coding your "personal" api!
+It's time to start coding your "personal" api!
 
 #### Minimum Requirements
 
@@ -139,3 +123,19 @@ Consume the Personal API you just created, and use it to build your own personal
 <br>
 
 <img src="https://media.giphy.com/media/mWUuD8qPSi5B6/giphy.gif" width="400">
+
+## Part 3. Deploy to Heroku
+Before we start coding, our first goal together is to configure our application so that it can be deployed to Heroku (a web application host).
+
+Follow the instructions here: [Deploying Express Apps to Heroku](https://github.com/SF-WDI-LABS/shared_modules/blob/master/how-to/heroku-mean-stack-deploy.md)
+
+As you continue to work on this project, you'll need to remember to push your changes to heroku (just like you would with github!):
+
+```bash
+# git add . -A
+# git commit -m "detailed description of what I changed"
+git push heroku master
+heroku open
+```
+
+It's common for code to break "in production" (broken links, different environment, missing dependenies...), so do your best to debug!
