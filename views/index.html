@@ -21,8 +21,38 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <h1>Under Construction</h1>
-          <h4><a href="/api">Read My API Documentation</a></h4>
+          <!-- <ul>Table of Contents
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/api">Read My API Documentation</a></li>
+          </ul> -->
+          <div id="profile">
+            <h4></h1>
+            <!-- TODO: With JQuery, append yoru profile info here -->
+          </div>
+          <hr>
+          <form class="form-inline" id="newDogForm">
+              <div class="form-group">
+                <label for="title">Make a dog! </label>
+                <input type="text" class="form-control" name="breed" placeholder="breed of dog">
+              </div>
+              <div class="form-group">
+                <label for="title"></label>
+                <input type="text" class="form-control" name="name" placeholder="What's the dog's name?">
+              </div>
+              <!-- <div class="form-group">
+                <label for="title">Characters</label>
+                <input type="text" class="form-control" name="characters[name]" placeholder="Book character 1">
+                <input type="text" class="form-control" name="characters[name]" placeholder="Book character 2">
+              </div> -->
+              <button type="submit" class="btn btn-default">Create Dog</button>
+            </form>
+          <div id="dogs">
+            <p> Name: Olive</p>
+            <p> Breed: Mutt </p>
+            <!--  TODO: With JQuery, append your dog infos here -->
+          </div>
         </div>
+
       </div>
     </div>
   </body>

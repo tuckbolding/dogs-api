@@ -19,7 +19,7 @@ app.use(function(req, res, next) {
  * DATABASE *
  ************/
 
-// var db = require('./models');
+var db = require('./models');
 
 /**********
  * ROUTES *
@@ -37,6 +37,32 @@ app.get('/', function homepage(req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
+app.get('/profile', function profilepage(req, res) {
+  res.sendFile(__dirname + '/views/profile.html');
+});
+
+app.get('/api/dogs', function displayDogs(req, res) {
+  db.Dog.find({}, function(err, allDogs){
+    if(err){return console.log(err);}
+    res.json({"dogs": allDogs})
+  })
+});
+
+app.get('/api/profile', function showProfile(req, res){
+  res.json( {
+            name: "Tucker Bolding",
+            githubLink: "http://github.com/tuckbolding",
+            githubProfileImage: "https://avatars1.githubusercontent.com/u/30449561?v=4&s=460",
+            currentCity: "San Francisco",
+            personalSiteLink: "https://tuckbolding.github.io/",
+            pets: [
+              { name: 'Posey', typeOfAnimal: 'Dog' },
+              { name: 'Mowgli', typeOfAnimal: 'Dog' },
+              { name: 'Bear', typeOfAnimal: 'Horse' },
+              { name: 'Tucker', typeOfAnimal: 'Horse' }
+            ]
+          });
+});
 
 /*
  * JSON API Endpoints
